@@ -357,7 +357,7 @@ public class DictionaryManager {
             if (join.isInnerJoin() == false)
                 return false;
             
-            TableRef table = join.getForeignKeyColumns()[0].getTableRef();
+            TableRef table = join.getFKSide();
             join = model.getPKSideJoinMap().get(table);
         }
         return true;
